@@ -81,8 +81,7 @@ class OAuth2FlowHandler(
             return self.async_abort(reason="reauth_successful")
 
         self.logger.debug(
-            "No existing authentication config flow found. "
-            "Creating new authentication."
+            "No existing authentication config flow found. Creating new authentication."
         )
         credentials = Credentials(data[CONF_TOKEN][CONF_ACCESS_TOKEN])
 
